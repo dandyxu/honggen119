@@ -13,3 +13,7 @@ Text Domain: coraldrive-child
 Tags: light, white, one-column, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-colors, custom-menu, editor-style, featured-images, threaded-comments, translation-ready
 
 */
+
+.alignright{
+	display: none;
+}

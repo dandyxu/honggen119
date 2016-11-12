@@ -8,11 +8,13 @@ if (get_option("UPCP_Dash_Cache") + 24*3600 < time()) {
 <!-- Upgrade to pro link box -->
 <!-- LEFT COLUMN -->
 <div id="ewd-dashboard-left-column" class="metabox-holder">
-<?php if ($Full_Version != "Yes") { ?>
+<?php if ($Full_Version != "Yes" or get_option("UPCP_Trial_Happening") == "Yes") { ?>
 <div id="ewd-dashboard-pro" class="postbox upcp-pro upcp-postbox-collapsible" >
 	<div class="handlediv" title="Click to toggle"></div><h3 class='hndle ewd-dashboard-h3'><span><?php _e("Full Version", 'UPCP') ?></span></h3>
 	<div class="inside">
 		<ul><li><a href="http://www.etoilewebdesign.com/plugins/ultimate-product-catalog/"><?php _e("Upgrade to the full version ", "UPCP"); ?></a><?php _e("to take advantage of all the available features of the Ultimate Product Catalogue for Wordpress!", 'UPCP'); ?></li>
+		<?php if (get_option("UPCP_Trial_Happening") == "Yes") { ?><li><strong>Your trial expires at <?php echo date("Y-m-d H:i:s", get_option("UPCP_Trial_Expiry_Time")); ?> GMT</strong>, upgrade before then to retain any premium changes made!</li>
+				<?php } elseif (!get_option("UPCP_Trial_Happening")) { ?><li>Want to try out the features first? Use code "EWD Trial" for a 7 day trial!</li><?php } ?>
 		<h3 class='hndle'><span><?php _e("What you get by upgrading:", 'UPCP') ?></span></h3>
 		<ul>
 			<li>Access to the "Custom Fields" tab, so you can create, filter by and display your own fields.</li>

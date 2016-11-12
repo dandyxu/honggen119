@@ -7,7 +7,7 @@ Author: Etoile Web Design
 Author URI: http://www.EtoileWebDesign.com/plugins/ultimate-product-catalog/
 Terms and Conditions: http://www.etoilewebdesign.com/plugin-terms-and-conditions/
 Text Domain: UPCP
-Version: 4.1.1
+Version: 4.1.2
 */
 
 global $UPCP_db_version;
@@ -289,6 +289,7 @@ include "Functions/UPCP_Pointers_Manager_Interface.php";
 include "Functions/UPCP_Pointers_Manager_Class.php";
 include "Functions/UPCP_Product_Inquiry_Form.php";
 include "Functions/UPCP_Styling.php";
+include "Functions/UPCP_Version_Reversion.php";
 include "Functions/UPCP_WC_Integration.php";
 include "Functions/UPCP_Widget.php";
 
